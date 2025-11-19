@@ -1,0 +1,227 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.210 Electron/34.3.2 Safari/537.36" version="26.0.16">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="936" dy="1269" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-0" target="FEUnff0WqS5h7hBmbTvg-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-0" value="Mechanical Issue" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="38" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-1" target="FEUnff0WqS5h7hBmbTvg-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-7" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-6">
+          <mxGeometry x="-0.2308" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-1" target="FEUnff0WqS5h7hBmbTvg-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-28" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-21">
+          <mxGeometry x="-0.3692" y="3" relative="1" as="geometry">
+            <mxPoint x="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-1" value="Is Issue with&amp;nbsp;&lt;div&gt;Fret System?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="30" y="180" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-5" target="FEUnff0WqS5h7hBmbTvg-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-24" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-12">
+          <mxGeometry x="-0.25" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-5" target="FEUnff0WqS5h7hBmbTvg-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-23" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-16">
+          <mxGeometry x="0.32" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-5" value="Are the Strings&amp;nbsp;&lt;div&gt;Buzzing on Frets?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="244" y="180" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-11" value="Adjust Saddles&lt;div&gt;and Verfiy Frame Alignment&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="444" y="205" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-15" target="FEUnff0WqS5h7hBmbTvg-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-25" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-18">
+          <mxGeometry x="-0.375" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="375" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-27" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-26">
+          <mxGeometry x="-0.0775" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-15" value="Are Notes Muted?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="244" y="320" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-17" value="Raise Solenoid Frame Aligment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="444" y="345" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-20" target="FEUnff0WqS5h7hBmbTvg-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-32" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-29">
+          <mxGeometry x="-0.2018" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-20" target="FEUnff0WqS5h7hBmbTvg-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-47" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-42">
+          <mxGeometry x="-0.4483" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-20" value="Is Issue with Plucking Unit?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="30" y="465" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-22" target="FEUnff0WqS5h7hBmbTvg-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-33" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-31">
+          <mxGeometry x="-0.25" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-22" target="FEUnff0WqS5h7hBmbTvg-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-40" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-39">
+          <mxGeometry x="-0.7129" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-22" value="Solenoid Not Hitting String?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="244" y="464.5" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-30" value="Re-adjust Heght and Horizontal Alignment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="444" y="489.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-36" target="FEUnff0WqS5h7hBmbTvg-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-38" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-37">
+          <mxGeometry x="-0.5468" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="655" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-48" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-43">
+          <mxGeometry x="-0.0037" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-36" value="It is Firing Pin Getting Stuck on String?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="244" y="600" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-41" target="FEUnff0WqS5h7hBmbTvg-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-65" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-49">
+          <mxGeometry x="-0.1453" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-41" target="FEUnff0WqS5h7hBmbTvg-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-63" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-60">
+          <mxGeometry x="-0.1088" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-41" value="Is Issue with&amp;nbsp;&lt;div&gt;Muting System?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="30" y="720" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-61" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-45" target="FEUnff0WqS5h7hBmbTvg-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-62" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-61">
+          <mxGeometry x="-0.1628" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-67" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-45" target="FEUnff0WqS5h7hBmbTvg-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-45" value="Not Making Contact?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="244" y="900" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-51" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="444" y="775" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-57" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-51">
+          <mxGeometry x="-0.2149" y="-2" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-46" target="FEUnff0WqS5h7hBmbTvg-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-64" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-58">
+          <mxGeometry x="-0.1333" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-46" value="Not Muting or Sluggish Response?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="244" y="720" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-53" target="FEUnff0WqS5h7hBmbTvg-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-56" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FEUnff0WqS5h7hBmbTvg-55">
+          <mxGeometry x="-0.2267" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FEUnff0WqS5h7hBmbTvg-53" target="FEUnff0WqS5h7hBmbTvg-68">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="504" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-53" value="Is the Solenoid Hot?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="436" y="720" width="136" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-54" value="Turn Off Entire System and Let Solenoid Cool" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="620" y="745" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-59" value="Check Firmware" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="38" y="925" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-66" value="Re-align Solenoid and Clear Interference" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="444" y="925" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FEUnff0WqS5h7hBmbTvg-68" value="Check Wiring and MOSFET Operation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="620" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,156 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1654" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-0" target="eDxjZxHRRdhhKlU3jCEt-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-0" value="String Unit" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="265.5" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-1" value="Reset Device" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="265.5" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="eDxjZxHRRdhhKlU3jCEt-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325.5" y="230" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-9" target="eDxjZxHRRdhhKlU3jCEt-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-6" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-5" vertex="1" connectable="0">
+          <mxGeometry y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-9" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="325.5" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-8" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-7" vertex="1" connectable="0">
+          <mxGeometry x="-0.24" y="-3" relative="1" as="geometry">
+            <mxPoint x="3" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-9" value="Do Solenoids&amp;nbsp;&lt;div&gt;Fire?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="261.5" y="270" width="128" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-15" target="eDxjZxHRRdhhKlU3jCEt-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-14" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-13" vertex="1" connectable="0">
+          <mxGeometry x="-0.1905" y="-1" relative="1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-15" target="eDxjZxHRRdhhKlU3jCEt-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-15" value="Are There Output&lt;div&gt;Pulses From Processor?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="433.5" y="258.75" width="130" height="122.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-20" target="eDxjZxHRRdhhKlU3jCEt-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-17" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-16" vertex="1" connectable="0">
+          <mxGeometry x="0.0316" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-20" target="eDxjZxHRRdhhKlU3jCEt-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-19" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-18" vertex="1" connectable="0">
+          <mxGeometry x="-0.3023" y="-2" relative="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-20" value="Does Output Have&amp;nbsp;&lt;div&gt;Power?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="610.5" y="267.5" width="130" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-21" value="Apply Power" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="615.5" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-26" target="eDxjZxHRRdhhKlU3jCEt-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-23" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-22" vertex="1" connectable="0">
+          <mxGeometry x="-0.2211" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-26" target="eDxjZxHRRdhhKlU3jCEt-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-25" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-24" vertex="1" connectable="0">
+          <mxGeometry x="-0.369" y="2" relative="1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-26" value="Do Opto-Isolators&lt;div&gt;Saturate?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="783.5" y="267.5" width="130" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-27" value="Replace Opto-Isolator?" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="788.5" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-32" target="eDxjZxHRRdhhKlU3jCEt-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-29" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="eDxjZxHRRdhhKlU3jCEt-28" vertex="1" connectable="0">
+          <mxGeometry x="-0.1898" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eDxjZxHRRdhhKlU3jCEt-32" target="FOFKgSgM0bR7NdMKkOV6-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-3" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FOFKgSgM0bR7NdMKkOV6-2">
+          <mxGeometry x="-0.0265" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-32" value="Do Output Transistors&lt;div&gt;Saturate?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="973.5" y="258.75" width="150" height="122.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-33" value="Replace Transistor?" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="988.5" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eDxjZxHRRdhhKlU3jCEt-35" value="Unit Is Working" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="265.5" y="420" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FOFKgSgM0bR7NdMKkOV6-1" target="FOFKgSgM0bR7NdMKkOV6-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="FOFKgSgM0bR7NdMKkOV6-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1218" y="390" />
+              <mxPoint x="330" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-8" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FOFKgSgM0bR7NdMKkOV6-7">
+          <mxGeometry x="-0.7543" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-1" value="Does Solenoid Drop&lt;div&gt;Voltage?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1180" y="258.75" width="150" height="122.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-4" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1257" y="398.25" as="geometry">
+            <mxPoint x="2" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FOFKgSgM0bR7NdMKkOV6-5" value="Replace Solenoid&lt;span style=&quot;background-color: initial;&quot;&gt;?&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1195" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

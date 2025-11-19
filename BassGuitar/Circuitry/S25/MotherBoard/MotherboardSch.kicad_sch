@@ -1,0 +1,187 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "06818073-fb22-48ee-acc5-6dedd827034e")
+	(paper "A")
+	(title_block
+		(title "Bass Guitar Motherboard Sch")
+		(date "2024-12-10")
+		(rev "B")
+	)
+	(lib_symbols)
+	(sheet
+		(at 104.14 52.07)
+		(size 45.085 24.13)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "0dc3b915-e001-48bd-b9bb-7010249087fd")
+		(property "Sheetname" "Master"
+			(at 104.14 51.3584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Master Sch.kicad_sch"
+			(at 104.14 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Motherboard Sch"
+				(path "/06818073-fb22-48ee-acc5-6dedd827034e"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 51.435)
+		(size 36.195 22.225)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "55f5fc9c-362b-429f-ad6f-f98ffe4c4860")
+		(property "Sheetname" "Fret Slave"
+			(at 157.48 50.7234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Eslave Sch.kicad_sch"
+			(at 157.48 74.2446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Motherboard Sch"
+				(path "/06818073-fb22-48ee-acc5-6dedd827034e"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 104.14 87.63)
+		(size 43.18 26.035)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "673444b1-2638-4f61-b545-e7cdf999c0e0")
+		(property "Sheetname" "String Strike Slave"
+			(at 104.14 86.9184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SSSlave sch.kicad_sch"
+			(at 104.14 114.2496 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Motherboard Sch"
+				(path "/06818073-fb22-48ee-acc5-6dedd827034e"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 54.61 52.705)
+		(size 40.005 23.495)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 255 194 1.0000)
+		)
+		(uuid "b03edaf9-bff0-4d7c-9ae3-3086f8e495f2")
+		(property "Sheetname" "Power In"
+			(at 54.61 51.9934 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PowerIn.kicad_sch"
+			(at 54.61 76.7846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Motherboard Sch"
+				(path "/06818073-fb22-48ee-acc5-6dedd827034e"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

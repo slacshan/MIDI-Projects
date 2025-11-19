@@ -1,0 +1,162 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1654" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="yuGzRuFiwNaYedug8o99-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-0" target="yuGzRuFiwNaYedug8o99-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-0" value="Serial Troubleshooting" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-2" target="yuGzRuFiwNaYedug8o99-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-34" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-5">
+          <mxGeometry x="0.2364" y="2" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-2" target="yuGzRuFiwNaYedug8o99-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-33" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-10">
+          <mxGeometry x="0.32" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-2" value="Is MIDI&lt;div&gt;Being Received?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="325" y="160" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-4" value="Check MIDI Connection" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="175" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-9" target="yuGzRuFiwNaYedug8o99-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-35" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-13">
+          <mxGeometry x="-0.0909" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-9" target="yuGzRuFiwNaYedug8o99-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-37" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-16">
+          <mxGeometry x="0.5" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-9" value="Does MIDI Address&lt;div&gt;Match Device?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="325" y="300" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-11" value="Match MIDI&lt;div&gt;Addresses&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="315" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-15" target="yuGzRuFiwNaYedug8o99-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-36" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-18">
+          <mxGeometry x="-0.3333" y="-2" relative="1" as="geometry">
+            <mxPoint x="-14" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-15" target="yuGzRuFiwNaYedug8o99-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-38" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-21">
+          <mxGeometry x="-0.2356" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-15" value="Does I2C Transmit&lt;div&gt;After MIDI Received?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="322.5" y="450" width="155" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-17" value="Reset Device" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-20" target="yuGzRuFiwNaYedug8o99-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-39" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-24">
+          <mxGeometry x="-0.592" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-20" target="yuGzRuFiwNaYedug8o99-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-40" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-27">
+          <mxGeometry x="-0.6974" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-20" value="Do I2C Addresses Match&lt;div&gt;Available Slaves?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="311.25" y="610" width="177.5" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-26" target="yuGzRuFiwNaYedug8o99-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-41" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-29">
+          <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-42" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="yuGzRuFiwNaYedug8o99-32">
+          <mxGeometry x="-0.05" y="2" relative="1" as="geometry">
+            <mxPoint x="-2" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-26" value="Do I2C Commands&lt;div&gt;Match Protocol?&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="310" y="790" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="yuGzRuFiwNaYedug8o99-28">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-28" value="Reset Device" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="150" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGzRuFiwNaYedug8o99-43" value="Serial Is Working" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="970" width="120" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
