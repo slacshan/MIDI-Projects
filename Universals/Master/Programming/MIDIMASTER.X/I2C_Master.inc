@@ -34,7 +34,7 @@ I2C_SETUP_SERVER:
     BSF TRISC,3
     BSF TRISC,4 		;Set SCL and SDA as inputs
     BANKSEL SSP1ADD
-    MOVLW 0X09
+    MOVLW 0X27
     MOVWF SSP1ADD		;Set BAUD Generator to 100Khz (4M Occilator)
     BANKSEL SSP1CON1
     MOVLW 0X28
@@ -60,9 +60,9 @@ START_WRITE_DONE:
     BANKSEL PIR1
     BTFSS PIR1, 3
     GOTO $-2
-    BCF PIR1, 3
+    BCF PIR1, 3  
     BANKSEL ADDRESS_W
-    MOVF ADDRESS_W,0
+    MOVF    ADDRESS_W,0
     BANKSEL SSP1BUF
     MOVWF SSP1BUF		;Send Peripheral Address (Write)
 ADDRESS_SENT_W:
@@ -76,10 +76,9 @@ ADDRESS_SENT_W:
     CALL I2C_IDLE		;Ensure the I2C BUS is idle
     BANKSEL SSP1CON2
     BTFSC SSP1CON2, 6	;Was an Acknowledge Received?
-    GOTO    BAD_COND		;Acknowledge Not Received
-    BANKSEL DATA_TX_1
-    MOVF DATA_TX_1,0
+    GOTO    BAD_COND		;Acknowledge Not Received    
     BANKSEL SSP1BUF
+    MOVF BYTE_1,0
     MOVWF SSP1BUF		;Send First Data Byte
 DATA_1_SENT_W:
     BANKSEL PIR1
@@ -93,9 +92,8 @@ DATA_1_SENT_W:
     BANKSEL SSP1CON2
     BTFSC SSP1CON2,6	;Was an Acknowledge Received?
     GOTO    BAD_COND		;Acknowledge Not Received
-    BANKSEL DATA_TX_2
-    MOVF DATA_TX_2,0
     BANKSEL SSP1BUF
+    MOVF BYTE_2,0
     MOVWF SSP1BUF		;Send Second Data Byte
 DATA_2_SENT:
     BANKSEL PIR1
@@ -109,9 +107,8 @@ DATA_2_SENT:
     BANKSEL SSP1CON2
     BTFSC SSP1CON2,6		;Was an Acknowledge Received?
     GOTO BAD_COND		;Acknowledge not Received
-    BANKSEL DATA_TX_3
-    MOVF DATA_TX_3,0
     BANKSEL SSP1BUF
+    MOVF BYTE_3,0
     MOVWF SSP1BUF		;Send Third Data Byte
 DATA_3_SENT:
     BANKSEL PIR1

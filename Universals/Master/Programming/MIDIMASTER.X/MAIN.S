@@ -40,16 +40,22 @@
 ;Code Section
 ;-------------------------------------------------------------------------------
 ;Register/Variable setup
- BUF_SAVE   EQU	0X050
- BSR_SAVE   EQU	0X051  
-   
+    ADDRESS_W			EQU	0X040
+    DATA_TX_1			EQU	0X041
+    DATA_TX_2			EQU	0X042
+    DATA_TX_3			EQU	0X043	
+    BUF_SAVE   EQU	0X050
+    BSR_SAVE   EQU	0X051  
+    BYTE_1	EQU 0X070
+    BYTE_2	EQU 0X071
+    BYTE_3	EQU 0X072
+    RX_BYTE	EQU 0X073
+    TEMP	EQU 0X074
 ;Start of Program
 PSECT resetVect,class=CODE,delta=2
 GOTO START
     
 PSECT isrVect,class=CODE,delta=2
-BANKSEL	PORTC
-BSF PORTC,1
 GOTO	RECEPTION
 RETFIE
    
@@ -65,14 +71,8 @@ START:
     BANKSEL ADDRESS_W
     MOVLW   0X00
     MOVWF   ADDRESS_W
-    BANKSEL DATA_TX_1
-    MOVLW   0XAA
-    MOVWF   DATA_TX_1
-    BANKSEL DATA_TX_2
-    MOVLW   0X55
-    MOVWF   DATA_TX_2
-    MOVLW   0X67
-    MOVWF   DATA_TX_3
+    MOVLW   0X00
+    MOVWF   RX_BYTE
     GOTO MAIN
     ;</editor-fold>    
        
@@ -82,4 +82,47 @@ MAIN:
     CALL I2C_WRITE
     GOTO MAIN
     
+    RECEPTION:
+    BANKSEL RC1REG
+    MOVF    RC1REG,0
+    MOVWF   TEMP
+    BTFSC   RX_BYTE,1
+    GOTO    BYTE3
+    BTFSC   RX_BYTE,0
+    GOTO    BYTE2
+BYTE1:
+    BANKSEL PORTB
+//<editor-fold defaultstate="collapsed" desc="ON/OFF TEST">
+;----------------TEST ADDRESS FOR A NOTE ON OR OFF-----------------
+    BTFSS   TEMP,7
+    GOTO END_RECIVE
+    BTFSC   TEMP,6
+    GOTO END_RECIVE
+    BTFSC   TEMP,5
+    GOTO END_RECIVE
+;------------------------------------------------------------------//</editor-fold>
+    MOVF    TEMP,0
+    MOVWF   BYTE_1
+    BSF	RX_BYTE,0
+    GOTO END_RECIVE
+BYTE2:
+    BANKSEL PORTB
+    MOVF    TEMP,0
+    MOVWF   BYTE_2
+    BCF	RX_BYTE,0
+    BSF	RX_BYTE,1
+    GOTO END_RECIVE   
+BYTE3:
+    BANKSEL PORTB
+    MOVF    TEMP,0
+    MOVWF   BYTE_3
+    BCF	RX_BYTE,0
+    BCF	RX_BYTE,1
+    GOTO END_RECIVE  
+END_RECIVE:
+    BANKSEL	PORTC
+    BSF PORTC,1    
+    BANKSEL	PORTC
+    BCF PORTC,1       
+    RETFIE  
 END

@@ -1,0 +1,40 @@
+# Explicit ignore
+*~
+
+# User Crap
+**/private/*
+
+# MPLAB X project garbage
+nbproject/private/
+nbproject/Makefile-*
+nbproject/configurations.xml
+nbproject/private.properties
+
+# Build outputs (object files, ELF, HEX, map, etc.)
+**/build/*
+**/dist/*
+*.o
+*.d
+*.p1
+*.dct
+*.lst
+*.cod
+*.map
+*.elf
+*.cof
+*.hex
+*.sdb
+*.sym
+*.obj
+*.exe
+
+# MPLAB X transient logs
+*.log
+*.tlog
+*.log.*
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
