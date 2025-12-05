@@ -51,6 +51,8 @@ I2C_SETUP_SERVER:
     RETURN
 
 I2C_WRITE:
+    CLRF    TEMP
+    CLRF    TEMP_2
     CALL I2C_IDLE		;Ensure the I2C BUS is idle
     BANKSEL SSP1CON2
     BSF SSP1CON2, 0		;Generate Start Condition

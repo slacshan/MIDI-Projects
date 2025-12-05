@@ -34,7 +34,7 @@ SETUP88:
     MOVLW 0X00
     MOVWF ANSELA
     BANKSEL TRISA
-    MOVLW	0X00
+    MOVLW	0XBF
     MOVWF	TRISA
     BANKSEL IOCAP
     MOVLW	0X00
@@ -53,7 +53,7 @@ SETUP88:
     
 ;--------------------------------------------------------PORT B------------------------------------------------------------------------------
     BANKSEL TRISB
-    MOVLW	0X00
+    MOVLW	0XFF
     MOVWF	TRISB
     BANKSEL ANSELB
     MOVLW	0X00
@@ -84,7 +84,7 @@ SETUP88:
     MOVLW	0X00
     MOVWF	LATC
     BANKSEL TRISC
-    MOVLW	0X19
+    MOVLW	0X18
     MOVWF	TRISC
     BANKSEL WPUC
     MOVLW	0X00

@@ -37,6 +37,7 @@
 #include "88Setup.inc"
 #include "I2C_Master.inc"
 #include "EUSART_SETUP.inc"
+#include "Filter.inc" 
 ;Code Section
 ;-------------------------------------------------------------------------------
 ;Register/Variable setup
@@ -44,6 +45,7 @@
     DATA_TX_1			EQU	0X041
     DATA_TX_2			EQU	0X042
     DATA_TX_3			EQU	0X043	
+    PORTB_CHECK	EQU 0X044
     BUF_SAVE   EQU	0X050
     BSR_SAVE   EQU	0X051  
     BYTE_1	EQU 0X070
@@ -51,6 +53,9 @@
     BYTE_3	EQU 0X072
     RX_BYTE	EQU 0X073
     TEMP	EQU 0X074
+    TEMP_2	EQU 0X075
+    I2C_SEND    EQU 0X076
+    NOTE_SELECT	EQU 0X077
 ;Start of Program
 PSECT resetVect,class=CODE,delta=2
 GOTO START
@@ -73,14 +78,52 @@ START:
     MOVWF   ADDRESS_W
     MOVLW   0X00
     MOVWF   RX_BYTE
-    GOTO MAIN
+    GOTO POWERUP
     ;</editor-fold>    
-       
-MAIN:
-    BANKSEL PORTC
-    BTFSC PORTC,0          ; BUTTON PRESSED?
-    CALL I2C_WRITE
+      
+POWERUP:
+    BANKSEL LATC
+    BSF	LATC,0
     GOTO MAIN
+    
+MAIN:
+    BANKSEL PORTB
+    BTFSC   I2C_SEND,0	;TEST TO SEE IF MY 3BYTE HAPPENED, IF SO THEN START I2C
+    GOTO    TEST_ADDRESS    ;TEST TO SEE IF MY CHANNEL MATCHES THE DIP SWITCH ADDRESS
+    GOTO MAIN
+    
+TEST_ADDRESS:
+    BCF	I2C_SEND,0
+    BANKSEL PORTB
+    MOVF    BYTE_1,0
+;-------------------REMOVE THE TOP NIBBLE FROM THE FIRST BYTE SO I CAN TEST JUST THE BOTTOM NIBBLE-------------
+    MOVWF   TEMP
+    BTFSC   TEMP,0
+    BSF	TEMP_2,0
+    BTFSC   TEMP,1
+    BSF	TEMP_2,1
+    BTFSC   TEMP,2
+    BSF	TEMP_2,2
+    BTFSC   TEMP,3
+    BSF	TEMP_2,3
+    CLRF    TEMP
+;---------------------------------------------------------------------------------------------------------------- 
+    MOVF    PORTB,0
+    XORWF   TEMP_2,0
+    XORLW   0X00
+    BTFSC   STATUS,2
+    GOTO    TEST_NOTE
+    CLRF    TEMP_2
+    GOTO    MAIN
+    
+COMPARE:
+    BANKSEL PORTB
+    MOVF    TEMP,0
+    SUBWF   BYTE_2,0
+    BTFSS   STATUS,1
+    CALL    I2C_WRITE
+    CLRF    TEMP
+    GOTO    MAIN
     
     RECEPTION:
     BANKSEL RC1REG
@@ -114,6 +157,7 @@ BYTE2:
     GOTO END_RECIVE   
 BYTE3:
     BANKSEL PORTB
+    BSF	I2C_SEND,0
     MOVF    TEMP,0
     MOVWF   BYTE_3
     BCF	RX_BYTE,0
