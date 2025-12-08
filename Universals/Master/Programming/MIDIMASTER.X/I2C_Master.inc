@@ -17,11 +17,7 @@
     ;5. Call I2C_WRITE
 
 #include <xc.inc>  
-    
-ADDRESS_W			EQU	0X040
-DATA_TX_1			EQU	0X041
-DATA_TX_2			EQU	0X042
-DATA_TX_3			EQU	0X043			
+    		
 
 
 PSECT code
@@ -51,6 +47,7 @@ I2C_SETUP_SERVER:
     RETURN
 
 I2C_WRITE:
+    BCF	I2C_SEND,0
     CLRF    TEMP
     CLRF    TEMP_2
     CALL I2C_IDLE		;Ensure the I2C BUS is idle

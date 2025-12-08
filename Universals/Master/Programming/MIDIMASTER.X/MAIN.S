@@ -37,17 +37,15 @@
 #include "88Setup.inc"
 #include "I2C_Master.inc"
 #include "EUSART_SETUP.inc"
-#include "Filter.inc" 
 ;Code Section
 ;-------------------------------------------------------------------------------
 ;Register/Variable setup
-    ADDRESS_W			EQU	0X040
-    DATA_TX_1			EQU	0X041
-    DATA_TX_2			EQU	0X042
-    DATA_TX_3			EQU	0X043	
+    ADDRESS_W	EQU 0X040
+    DATA_TX_1	EQU 0X041
+    DATA_TX_2	EQU 0X042
+    DATA_TX_3	EQU 0X043	
     PORTB_CHECK	EQU 0X044
-    BUF_SAVE   EQU	0X050
-    BSR_SAVE   EQU	0X051  
+    BUF_SAVE    EQU 0X050 
     BYTE_1	EQU 0X070
     BYTE_2	EQU 0X071
     BYTE_3	EQU 0X072
@@ -56,6 +54,10 @@
     TEMP_2	EQU 0X075
     I2C_SEND    EQU 0X076
     NOTE_SELECT	EQU 0X077
+    W_SAVE	EQU 0X078
+    BSR_SAVE    EQU 0X079
+    STATUS_SAVE EQU 0X07A
+    FF_REG	EQU 0X07B
 ;Start of Program
 PSECT resetVect,class=CODE,delta=2
 GOTO START
@@ -78,6 +80,8 @@ START:
     MOVWF   ADDRESS_W
     MOVLW   0X00
     MOVWF   RX_BYTE
+    MOVLW   0XFF
+    MOVWF   FF_REG
     GOTO POWERUP
     ;</editor-fold>    
       
@@ -111,21 +115,103 @@ TEST_ADDRESS:
     MOVF    PORTB,0
     XORWF   TEMP_2,0
     XORLW   0X00
-    BTFSC   STATUS,0
-    GOTO    TEST_NOTE
-    CLRF    TEMP_2
+    BTFSS   STATUS,2
     GOTO    MAIN
+    CALL    NOTE_TEST
     
 COMPARE:
-    BANKSEL PORTB
+    BANKSEL PORTA
     MOVF    TEMP,0
-    SUBWF   BYTE_2,0
-    BTFSS   STATUS,1
+    SUBWF   FF_REG,0
+    ADDWF   BYTE_2,0
+    BANKSEL STATUS
+    BTFSS   STATUS,0
     CALL    I2C_WRITE
     CLRF    TEMP
     GOTO    MAIN
     
-    RECEPTION:
+//<editor-fold defaultstate="collapsed" desc="NOTE FILTERING">
+NOTE_TEST:
+;------ADDS VALUES TO A REGISTER BASED UPON WHAT DIP SWITCHES ARE PRESSED-------
+    BANKSEL PORTA
+    CLRF    NOTE_SELECT
+    CLRF    TEMP_2
+    CLRF    TEMP
+    MOVLW   3
+    BTFSC   PORTA,0
+    ADDWF   NOTE_SELECT,1
+    MOVLW   6
+    BTFSC   PORTA,1
+    ADDWF   NOTE_SELECT,1
+    MOVLW   12
+    BTFSC   PORTA,2
+    ADDWF   NOTE_SELECT,1
+    MOVLW   24
+    BTFSC   PORTA,3
+    ADDWF   NOTE_SELECT,1
+    ;--------------LOOKUP TABLE THAT SELECTS THE NOTE COMPARISON VALUE--------------
+//<editor-fold defaultstate="collapsed" desc="LOOKUP TABLE">
+LOOKUP_TABLE:
+    BANKSEL PCL
+    MOVF    NOTE_SELECT,0
+    ADDWF   PCL,1
+    MOVLW   7
+    MOVWF   TEMP
+    RETURN 
+    MOVLW   15
+    MOVWF   TEMP
+    RETURN
+    MOVLW   23
+    MOVWF   TEMP
+    RETURN
+    MOVLW   31
+    MOVWF   TEMP
+    RETURN
+    MOVLW   39
+    MOVWF   TEMP
+    RETURN
+    MOVLW   47
+    MOVWF   TEMP
+    RETURN
+    MOVLW   55
+    MOVWF   TEMP
+    RETURN
+    MOVLW   63
+    MOVWF   TEMP
+    RETURN
+    MOVLW   71
+    MOVWF   TEMP
+    RETURN
+    MOVLW   79
+    MOVWF   TEMP
+    RETURN
+    MOVLW   87
+    MOVWF   TEMP
+    RETURN
+    MOVLW   95
+    MOVWF   TEMP
+    RETURN
+    MOVLW   103
+    MOVWF   TEMP
+    RETURN
+    MOVLW   111
+    MOVWF   TEMP
+    RETURN
+    MOVLW   119
+    MOVWF   TEMP
+    RETURN
+    MOVLW   127
+    MOVWF   TEMP
+    RETURN//</editor-fold>
+;----------MAKES SURE THE NOTE BEING SENT IS NOT ABOVE THE MAX NOTE-----------    
+    //</editor-fold> 
+    
+    RECEPTION: 
+    MOVWF   W_SAVE
+    MOVF    BSR,0
+    MOVWF   BSR_SAVE
+    MOVF    STATUS,0
+    MOVWF   STATUS_SAVE   
     BANKSEL RC1REG
     MOVF    RC1REG,0
     MOVWF   TEMP
@@ -164,9 +250,10 @@ BYTE3:
     BCF	RX_BYTE,1
     GOTO END_RECIVE  
 END_RECIVE:
-    BANKSEL	PORTC
-    BSF PORTC,1    
-    BANKSEL	PORTC
-    BCF PORTC,1       
+    MOVF    BSR_SAVE,0
+    MOVWF   BSR
+    MOVF    STATUS_SAVE,0
+    MOVWF   STATUS
+    MOVF    W_SAVE,0
     RETFIE  
 END
