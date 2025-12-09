@@ -121,7 +121,7 @@ TEST_ADDRESS:
     
 COMPARE:
     BANKSEL PORTA
-    MOVF    TEMP,0
+    MOVF    NOTE_SELECT,0
     SUBWF   FF_REG,0
     ADDWF   BYTE_2,0
     BANKSEL STATUS
@@ -134,77 +134,23 @@ COMPARE:
 NOTE_TEST:
 ;------ADDS VALUES TO A REGISTER BASED UPON WHAT DIP SWITCHES ARE PRESSED-------
     BANKSEL PORTA
-    CLRF    NOTE_SELECT
+    MOVLW   0X07    
+    MOVWF   NOTE_SELECT
     CLRF    TEMP_2
     CLRF    TEMP
-    MOVLW   3
+    MOVLW   8
     BTFSC   PORTA,0
     ADDWF   NOTE_SELECT,1
-    MOVLW   6
+    MOVLW   16
     BTFSC   PORTA,1
     ADDWF   NOTE_SELECT,1
-    MOVLW   12
+    MOVLW   32
     BTFSC   PORTA,2
     ADDWF   NOTE_SELECT,1
-    MOVLW   24
+    MOVLW   64
     BTFSC   PORTA,3
     ADDWF   NOTE_SELECT,1
-    ;--------------LOOKUP TABLE THAT SELECTS THE NOTE COMPARISON VALUE--------------
-//<editor-fold defaultstate="collapsed" desc="LOOKUP TABLE">
-LOOKUP_TABLE:
-    BANKSEL PCL
-    MOVF    NOTE_SELECT,0
-    ADDWF   PCL,1
-    MOVLW   7
-    MOVWF   TEMP
-    RETURN 
-    MOVLW   15
-    MOVWF   TEMP
     RETURN
-    MOVLW   23
-    MOVWF   TEMP
-    RETURN
-    MOVLW   31
-    MOVWF   TEMP
-    RETURN
-    MOVLW   39
-    MOVWF   TEMP
-    RETURN
-    MOVLW   47
-    MOVWF   TEMP
-    RETURN
-    MOVLW   55
-    MOVWF   TEMP
-    RETURN
-    MOVLW   63
-    MOVWF   TEMP
-    RETURN
-    MOVLW   71
-    MOVWF   TEMP
-    RETURN
-    MOVLW   79
-    MOVWF   TEMP
-    RETURN
-    MOVLW   87
-    MOVWF   TEMP
-    RETURN
-    MOVLW   95
-    MOVWF   TEMP
-    RETURN
-    MOVLW   103
-    MOVWF   TEMP
-    RETURN
-    MOVLW   111
-    MOVWF   TEMP
-    RETURN
-    MOVLW   119
-    MOVWF   TEMP
-    RETURN
-    MOVLW   127
-    MOVWF   TEMP
-    RETURN//</editor-fold>
-;----------MAKES SURE THE NOTE BEING SENT IS NOT ABOVE THE MAX NOTE-----------    
-    //</editor-fold> 
     
     RECEPTION: 
     MOVWF   W_SAVE
