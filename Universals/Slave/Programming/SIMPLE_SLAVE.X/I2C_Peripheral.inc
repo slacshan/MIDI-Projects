@@ -25,7 +25,7 @@ I2C_SETUP_PERIPHERAL:
     BSF TRISC,3
     BSF TRISC,4		;Set SCL and SDA as inputs
     BANKSEL SSP1CON1
-    MOVLW 0X3E
+    MOVLW 0X36
     MOVWF SSP1CON1		;Enable SDA and SCL Pins, Enable Clock, and Set as 7 bit address Slave
     BANKSEL SSP1CON2
     MOVLW 0X81

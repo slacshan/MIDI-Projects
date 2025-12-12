@@ -1,8 +1,8 @@
 ;-----------------------------------------------------------------------------------------------------------------------------------------------
 ; PROJECT NAME:	SETUP FOR 1788
 ;DATE:		10 APRIL 2025
-;VERSION:		1
-;CREATOR:		JUSTIN BELL
+;VERSION:		2
+;CREATOR:		JUSTIN BELL, REVISED BY PAYDEN HOSKINS
 ;COMPANY:	IDAHO STATE UNIVERSITY
 ;DESCRIPTION:	SETUP INCLUDE FILE FOR THE 1788
 ;		ADDRESSES ALL PORTS AND OTHER REGISTERS
@@ -15,13 +15,15 @@ PSECT code
 SETUP88:
  ;--------------------------------------------------------OSCILLATOR---------------------------------------------------------------------
     BANKSEL OSCSTAT
-    BTFSC OSCSTAT,6	    ;WAIT FOR PLL TO BE UP AND RUNNING
-    GOTO $-2
+    BTFSC OSCSTAT,6	    ; WAIT FOR PLL TO BE UP AND RUNNING
+    GOTO $-1
     BANKSEL OSCCON
-    MOVLW 0XEB
+    CLRF OSCCON
+    MOVLW 0X78	    ; SET OSCILLATOR FOR 16MHZ AND LOOK AT CONFIG BITS
     MOVWF OSCCON
+    BCF OSCCON,7	    ; DISABLE 4X PLL FOR 16MHZ CLOCK
     BANKSEL OSCSTAT
-    BTFSC OSCSTAT,5	    ;WAIT FOR OSSCILATOR TO BE READY
+    BTFSC OSCSTAT,5	    ; WAIT FOR OSSCILATOR TO BE READY
     GOTO $-1
  
 ;--------------------------------------------------------PORT A------------------------------------------------------------------------------
@@ -51,7 +53,7 @@ SETUP88:
     
 ;--------------------------------------------------------PORT B------------------------------------------------------------------------------
     BANKSEL TRISB
-    MOVLW	0X01
+    MOVLW	0X00
     MOVWF	TRISB
     BANKSEL ANSELB
     MOVLW	0X00
@@ -82,7 +84,7 @@ SETUP88:
     MOVLW	0X00
     MOVWF	LATC
     BANKSEL TRISC
-    MOVLW	0X18
+    MOVLW	0X1A
     MOVWF	TRISC
     BANKSEL WPUC
     MOVLW	0X00
@@ -113,12 +115,12 @@ SETUP88:
     
 ;--------------------------------------------------------INTERRUPT CONTROL-----------------------------------------------------------
     BANKSEL INTCON
-    MOVLW	0X00
+    MOVLW	0XC0
     MOVWF	INTCON
     
 ;--------------------------------------------------------PERIPHERAL ONE-----------------------------------------------------------------
     BANKSEL PIE1
-    MOVLW	0X00
+    MOVLW	0X08
     MOVWF	PIE1
     
 ;--------------------------------------------------------PERIPHERAL TWO----------------------------------------------------------------
@@ -126,6 +128,35 @@ SETUP88:
     MOVLW	0X00
     MOVWF	PIE2
     
+;--------------------------------------------------------PERIPHERAL THREE----------------------------------------------------------------
+    BANKSEL PIE3
+    MOVLW	0X00
+    MOVWF	PIE3
+    
+;--------------------------------------------------------PERIPHERAL FOUR----------------------------------------------------------------
+    BANKSEL PIE4
+    MOVLW	0X00
+    MOVWF	PIE4
+
+;--------------------------------------------------------FLAGS ONE-----------------------------------------------------------------
+    BANKSEL PIR1
+    MOVLW	0X00
+    MOVWF	PIR1
+    
+;--------------------------------------------------------FLAGS TWO----------------------------------------------------------------
+    BANKSEL PIR2
+    MOVLW	0X00
+    MOVWF	PIR2
+    
+;--------------------------------------------------------FLAGS THREE----------------------------------------------------------------
+    BANKSEL PIR3
+    MOVLW	0X00
+    MOVWF	PIR3
+    
+;--------------------------------------------------------FALGS FOUR----------------------------------------------------------------
+    BANKSEL PIR4
+    MOVLW	0X00
+    MOVWF	PIR4
 ;--------------------------------------------------------CCP1 CONTROL--------------------------------------------------------------------
 ;    BANKSEL CCP1CON
 ;    MOVLW	B'00000000'
