@@ -34,19 +34,23 @@
 // config statements should precede project file includes.
 #include <xc.inc>
 #include <pic16f1788.inc>
-#include "88Setup.inc"
+#include "88Setup_Slave.inc"
 #include "I2C_Peripheral.inc"
 ;Code Section
-;-------------------------------------------------------------------------------
-;Register/Variable setup
- BUF_SAVE   EQU	0X20
-   
+
+;EQU STATMENTS
+DATA_BYTE			EQU	0X070
+DATA_RX_1			EQU	0X071
+DATA_RX_2			EQU	0X072
+DATA_RX_3			EQU	0X073
+			
 ;Start of Program
 PSECT resetVect,class=CODE,delta=2
 GOTO START
     
 PSECT isrVect,class=CODE,delta=2
-RETFIE    
+GOTO	INTERRUPT
+RETFIE
    
 PSECT code,class=CODE,delta=2
 ;Setup code that runs once at power up/ reset
@@ -54,17 +58,84 @@ PSECT code,class=CODE,delta=2
 ;PIC SETUP
 ;<editor-fold defaultstate="collapsed" desc="STARTUP CODE.">
 START:
-    CALL SETUP88		;Typical register configuration    
-    CALL I2C_SETUP_PERIPHERAL	;Addresses relevent I2C registers for I2C master/server
-    BANKSEL DATA_BYTE
+    CALL SETUP88		;Typical register configuration  
+    CALL I2C_SETUP_PERIPHERAL
+    BANKSEL LATA
+    BCF	LATA,0
+    BCF	LATA,1
+    BCF	LATA,2
     CLRF    DATA_BYTE
+    CLRF	DATA_RX_1
+    CLRF	DATA_RX_2
+    CLRF	DATA_RX_3
+    GOTO    POWERUP
+    ;</editor-fold>
+    
+POWERUP:
+    BANKSEL LATC
+    BSF	LATC,0
     GOTO MAIN
-    ;</editor-fold>    
-       
+    
 MAIN:
-    BANKSEL PIR1
-    BTFSC   PIR1,3
+    GOTO    MAIN
+  
+INTERRUPT:
     CALL    I2C_READ
-    GOTO MAIN
+    RETFIE
+    
+I2C_READ:
+    BANKSEL PIR1
+    BTFSS PIR1, 3
+    GOTO GOOD_STOP
+    BANKSEL SSP1STAT
+    BTFSC SSP1STAT, 2
+    GOTO LOAD_BUFFER
+    BTFSC SSP1STAT, 5
+    GOTO RX_DATA
+    BANKSEL SSP1BUF
+    MOVF SSP1BUF,0
+    BANKSEL DATA_BYTE
+    CLRF DATA_BYTE
+    GOTO GOOD_STOP
+    
+LOAD_BUFFER:
+    ;LOAD BUFFER WITH DATA FOR THE MASTER TO READ
+    GOTO GOOD_STOP
+    
+RX_DATA:
+    BTFSC DATA_BYTE, 1
+    GOTO RX_THREE
+    BTFSC DATA_BYTE, 0
+    GOTO RX_TWO
+RX_ONE:
+    BANKSEL SSP1BUF
+    MOVF SSP1BUF,0
+    MOVWF DATA_RX_1
+    BSF DATA_BYTE, 0
+    GOTO GOOD_STOP
+    
+RX_TWO:
+    BANKSEL SSP1BUF
+    MOVF SSP1BUF,0
+    MOVWF DATA_RX_2
+    BCF DATA_BYTE, 0
+    BSF DATA_BYTE, 1
+    GOTO GOOD_STOP
+    
+RX_THREE:
+    CLRF   DATA_RX_3 
+    BANKSEL SSP1BUF
+    MOVF SSP1BUF,0
+    MOVWF DATA_RX_3
+    BCF DATA_BYTE, 0
+    BCF DATA_BYTE, 1
+    GOTO GOOD_STOP
+    
+GOOD_STOP:
+    BANKSEL PIR1
+    BCF PIR1, 3
+    BANKSEL SSP1CON1
+    BSF SSP1CON1, 4
+    RETURN			;Write Complete.  Return With 0x00 in Working Register
     
 END
