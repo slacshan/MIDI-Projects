@@ -63,7 +63,6 @@ PSECT resetVect,class=CODE,delta=2
 GOTO START
     
 PSECT isrVect,class=CODE,delta=2
-GOTO	RECEPTION
 RETFIE
    
 PSECT code,class=CODE,delta=2
@@ -91,13 +90,18 @@ POWERUP:
     GOTO MAIN
     
 MAIN:
-    BANKSEL PORTB
-    BTFSC   I2C_SEND,0	;TEST TO SEE IF MY 3BYTE HAPPENED, IF SO THEN START I2C
-    GOTO    TEST_ADDRESS    ;TEST TO SEE IF MY CHANNEL MATCHES THE DIP SWITCH ADDRESS
+    BANKSEL PIR1
+    BTFSC   PIR1,5
+    CALL RECEPTION
+    ;BANKSEL PORTB
+    ;BTFSC   I2C_SEND,0	;TEST TO SEE IF MY 3BYTE HAPPENED, IF SO THEN START I2C
+       ;TEST TO SEE IF MY CHANNEL MATCHES THE DIP SWITCH ADDRESS
     GOTO MAIN
     
 TEST_ADDRESS:
     BCF	I2C_SEND,0
+    CLRF    TEMP
+    CLRF TEMP_2
     BANKSEL PORTB
     MOVF    BYTE_1,0
 ;-------------------REMOVE THE TOP NIBBLE FROM THE FIRST BYTE SO I CAN TEST JUST THE BOTTOM NIBBLE-------------
@@ -113,6 +117,7 @@ TEST_ADDRESS:
     CLRF    TEMP
 ;---------------------------------------------------------------------------------------------------------------- 
     MOVF    PORTB,0
+    ANDLW   0X0F
     XORWF   TEMP_2,0
     XORLW   0X00
     BTFSS   STATUS,2
@@ -128,7 +133,7 @@ COMPARE:
     BTFSS   STATUS,0
     CALL    I2C_WRITE
     CLRF    TEMP
-    GOTO    MAIN
+    RETURN
     
 //<editor-fold defaultstate="collapsed" desc="NOTE FILTERING">
 NOTE_TEST:
@@ -189,11 +194,12 @@ BYTE2:
     GOTO END_RECIVE   
 BYTE3:
     BANKSEL PORTB
-    BSF	I2C_SEND,0
+    ;BSF	I2C_SEND,0
     MOVF    TEMP,0
     MOVWF   BYTE_3
     BCF	RX_BYTE,0
     BCF	RX_BYTE,1
+    CALL TEST_ADDRESS
     GOTO END_RECIVE  
 END_RECIVE:
     MOVF    BSR_SAVE,0
@@ -201,5 +207,111 @@ END_RECIVE:
     MOVF    STATUS_SAVE,0
     MOVWF   STATUS
     MOVF    W_SAVE,0
-    RETFIE  
+    RETURN  
+    
+I2C_WRITE:
+    BCF	I2C_SEND,0
+    CLRF    TEMP
+    CLRF    TEMP_2
+    CALL I2C_IDLE		;Ensure the I2C BUS is idle
+    BANKSEL SSP1CON2
+    BSF SSP1CON2, 0		;Generate Start Condition
+START_WRITE_DONE:
+    BTFSC SSP1CON2, 0
+    GOTO START_WRITE_DONE	;Wait Until Start Condition Completes
+    BANKSEL PIR1
+    BTFSS PIR1, 3
+    GOTO $-2
+    BCF PIR1, 3  
+    BANKSEL ADDRESS_W
+    MOVF    ADDRESS_W,0
+    BANKSEL SSP1BUF
+    MOVWF SSP1BUF		;Send Peripheral Address (Write)
+ADDRESS_SENT_W:
+    BANKSEL PIR1
+    BTFSS PIR1, 3
+    GOTO $-2
+    BCF PIR1, 3
+    BANKSEL SSP1STAT
+    BTFSC SSP1STAT,0		
+    GOTO $-2		;Wait Until Buffer is Clear (Address is Sent)
+    CALL I2C_IDLE		;Ensure the I2C BUS is idle
+    BANKSEL SSP1CON2
+    BTFSC SSP1CON2, 6	;Was an Acknowledge Received?
+    GOTO    BAD_COND		;Acknowledge Not Received    
+    BANKSEL SSP1BUF
+    MOVF BYTE_1,0
+    MOVWF SSP1BUF		;Send First Data Byte
+DATA_1_SENT_W:
+    BANKSEL PIR1
+    BTFSS PIR1, 3
+    GOTO $-2
+    BCF PIR1, 3
+    BANKSEL SSP1STAT
+    BTFSC SSP1STAT,0
+    GOTO $-2		;Wait Until Buffer is Clear (Data is Sent)
+    CALL I2C_IDLE		;Ensure the I2C BUS is idle
+    BANKSEL SSP1CON2
+    BTFSC SSP1CON2,6	;Was an Acknowledge Received?
+    GOTO    BAD_COND		;Acknowledge Not Received
+    BANKSEL SSP1BUF
+    MOVF BYTE_2,0
+    MOVWF SSP1BUF		;Send Second Data Byte
+DATA_2_SENT:
+    BANKSEL PIR1
+    BTFSS PIR1, 3
+    GOTO $-2
+    BCF PIR1, 3
+    BANKSEL SSP1STAT		;Note I2C can use as many data bytes as desired, this program is only setup for two
+    BTFSC SSP1STAT,0
+    GOTO $-2		;Wait Unitl Buffer is Clear (Data is Sent)
+    CALL I2C_IDLE
+    BANKSEL SSP1CON2
+    BTFSC SSP1CON2,6		;Was an Acknowledge Received?
+    GOTO BAD_COND		;Acknowledge not Received
+    BANKSEL SSP1BUF
+    MOVF BYTE_3,0
+    MOVWF SSP1BUF		;Send Third Data Byte
+DATA_3_SENT:
+    BANKSEL PIR1
+    BTFSS PIR1, 3
+    GOTO $-2
+    BCF PIR1, 3
+    BANKSEL SSP1STAT		;Note I2C can use as many data bytes as desired, this program is only setup for two
+    BTFSC SSP1STAT,0
+    GOTO $-2		;Wait Unitl Buffer is Clear (Data is Sent)
+    CALL I2C_IDLE
+    BANKSEL SSP1CON2
+    BTFSC SSP1CON2,6		;Was an Acknowledge Received?
+    GOTO BAD_COND		;Acknowledge not Received    
+GOOD_STOP:
+    BANKSEL SSP1CON2
+    BSF SSP1CON2,2		;Generate a Stop Condition
+GOOD_STOP_DONE:
+    BTFSC SSP1CON2,2
+    GOTO GOOD_STOP_DONE	;Wait Until Stop Condition Completes
+    MOVLW 0X00
+    RETURN			;Write Complete.  Return With 0x00 in Working Register
+
+BAD_COND:
+    BANKSEL SSP1CON2
+    BSF SSP1CON2,2		;Generate Stop Condition
+BAD_STOP_DONE:
+    BTFSC SSP1CON2,2
+    GOTO BAD_STOP_DONE	;Wait Until Stop Condition Completes
+    MOVLW 0XFF
+    RETURN			;Write Failed.  Return Wif 0xFF in Working Register
+
+I2C_IDLE:
+    BANKSEL SSP1CON2
+    MOVLW 0X1F
+    ANDWF SSP1CON2		;Compare to 0x1F to Test for 5 Busy Conditions
+    BANKSEL STATUS
+    BTFSS STATUS,2
+    GOTO I2C_IDLE		;If any Conditions Still Busy Wait
+CHECK_R_W:
+    BANKSEL SSP1STAT
+    BTFSC SSP1STAT,2
+    GOTO CHECK_R_W		;Wait Until  a Transmission is Not in Process
+    RETURN			;I2C BUS is Idle Exit Routine
 END
