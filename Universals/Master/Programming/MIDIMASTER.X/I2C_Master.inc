@@ -46,8 +46,10 @@ I2C_SETUP_SERVER:
     MOVWF SSP1STAT		;Not in Tx mode, Slew Rate Control Disabled
     RETURN
 
-    
 I2C_WRITE:
+    BCF	I2C_SEND,0
+    CLRF    TEMP
+    CLRF    TEMP_2
     CALL I2C_IDLE		;Ensure the I2C BUS is idle
     BANKSEL SSP1CON2
     BSF SSP1CON2, 0		;Generate Start Condition
