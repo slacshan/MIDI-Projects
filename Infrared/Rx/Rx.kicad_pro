@@ -598,7 +598,7 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "C:\\Users\\Juxin\\OneDrive\\Desktop\\School\\Robotics\\Semester Five\\PCBDesign\\TitleBlocks\\JB_RCET_Title_Block_S2025.kicad_wks",
+    "page_layout_descr_file": "kicad-embed://JB_RCET_Title_Block_S2025.kicad_wks",
     "plot_directory": "",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
