@@ -1,6 +1,10 @@
 {
   "board": {
+<<<<<<< HEAD
     "active_layer": 25,
+=======
+    "active_layer": 0,
+>>>>>>> 2a1522a7f210075dd74f2e6a88ab6e88cd5f52fc
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -33,6 +37,7 @@
       "footprint_text",
       "footprint_anchors",
       "ratsnest",
+      "grid",
       "footprints_front",
       "footprints_back",
       "footprint_values",
