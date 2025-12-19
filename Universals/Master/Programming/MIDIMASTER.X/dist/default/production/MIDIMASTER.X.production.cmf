@@ -1,0 +1,632 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/MAIN.o
+code CODE 0 8 8 16D 2 1
+resetVect CODE 0 0 0 1 2 1
+isrVect CODE 0 4 4 1 2 1
+config CONFIG 4 8007 8007 2 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 20-6F 1
+RAM A0-EF 1
+RAM 120-16F 1
+RAM 1A0-1EF 1
+RAM 220-26F 1
+RAM 2A0-2EF 1
+RAM 320-36F 1
+RAM 3A0-3EF 1
+RAM 420-46F 1
+RAM 4A0-4EF 1
+RAM 520-56F 1
+RAM 5A0-5EF 1
+RAM 620-66F 1
+RAM 6A0-6EF 1
+RAM 720-76F 1
+RAM 7A0-7EF 1
+RAM 820-86F 1
+RAM 8A0-8EF 1
+RAM 920-96F 1
+RAM 9A0-9EF 1
+RAM A20-A6F 1
+RAM AA0-AEF 1
+RAM B20-B6F 1
+RAM BA0-BEF 1
+RAM C20-C6F 1
+RAM CA0-CBF 1
+BANK0 20-6F 1
+BANK1 A0-EF 1
+BANK2 120-16F 1
+BANK3 1A0-1EF 1
+BANK4 220-26F 1
+BANK5 2A0-2EF 1
+BANK6 320-36F 1
+BANK7 3A0-3EF 1
+BANK8 420-46F 1
+BANK9 4A0-4EF 1
+CONST 1-3 2
+CONST 5-7 2
+CONST 175-3FFF 2
+ENTRY 1-3 2
+ENTRY 5-7 2
+ENTRY 175-3FFF 2
+IDLOC 8000-8003 2
+SFR10 500-51F 1
+SFR11 580-59F 1
+SFR12 600-61F 1
+SFR13 680-69F 1
+SFR14 700-71F 1
+SFR15 780-79F 1
+SFR16 800-81F 1
+SFR17 880-89F 1
+SFR18 900-91F 1
+SFR19 980-99F 1
+SFR20 A00-A1F 1
+SFR21 A80-A9F 1
+SFR22 B00-B1F 1
+SFR23 B80-B9F 1
+SFR24 C00-C1F 1
+SFR25 C80-C9F 1
+SFR26 D00-D6F 1
+SFR27 D80-DEF 1
+SFR28 E00-E6F 1
+SFR29 E80-EEF 1
+SFR30 F00-F6F 1
+SFR31 F80-FEF 1
+CODE 1-3 2
+CODE 5-7 2
+CODE 175-3FFF 2
+SFR0 2-7 1
+SFR0 A-F 1
+SFR6 300-31F 1
+SFR7 380-39F 1
+SFR8 400-41F 1
+SFR9 480-49F 1
+BANK10 520-56F 1
+BANK11 5A0-5EF 1
+BANK12 620-66F 1
+BANK13 6A0-6EF 1
+BANK14 720-76F 1
+BANK15 7A0-7EF 1
+BANK16 820-86F 1
+BANK17 8A0-8EF 1
+BANK18 920-96F 1
+BANK19 9A0-9EF 1
+BANK20 A20-A6F 1
+BANK21 AA0-AEF 1
+BANK22 B20-B6F 1
+BANK23 BA0-BEF 1
+BANK24 C20-C6F 1
+BANK25 CA0-CBF 1
+BIGRAM 2000-27EF 1
+COMMON 70-7F 1
+EEDATA F000-F0FF 2
+STRCODE 1-3 2
+STRCODE 5-7 2
+STRCODE 175-3FFF 2
+STRING 1-3 2
+STRING 5-7 2
+STRING 175-3FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/MAIN.o
+4 isrVect CODE >66:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+0 resetVect CODE >63:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+8 code CODE >17:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+9 code CODE >18:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+A code CODE >19:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+B code CODE >20:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+C code CODE >21:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+D code CODE >22:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+E code CODE >23:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+F code CODE >24:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+10 code CODE >25:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+11 code CODE >26:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+12 code CODE >27:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+13 code CODE >30:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+14 code CODE >31:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+15 code CODE >32:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+16 code CODE >33:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+17 code CODE >34:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+18 code CODE >35:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+19 code CODE >36:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+1A code CODE >37:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+1B code CODE >38:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+1C code CODE >39:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+1D code CODE >40:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+1E code CODE >41:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+1F code CODE >42:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+20 code CODE >43:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+21 code CODE >44:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+22 code CODE >45:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+23 code CODE >46:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+24 code CODE >47:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+25 code CODE >48:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+26 code CODE >49:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+27 code CODE >50:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+28 code CODE >51:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+29 code CODE >52:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+2A code CODE >55:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+2B code CODE >56:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+2C code CODE >57:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+2D code CODE >58:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+2E code CODE >59:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+2F code CODE >60:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+30 code CODE >61:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+31 code CODE >62:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+32 code CODE >63:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+33 code CODE >64:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+34 code CODE >65:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+35 code CODE >66:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+36 code CODE >67:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+37 code CODE >68:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+38 code CODE >69:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+39 code CODE >70:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+3A code CODE >71:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+3B code CODE >72:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+3C code CODE >73:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+3D code CODE >74:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+3E code CODE >75:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+3F code CODE >76:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+40 code CODE >77:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+41 code CODE >78:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+42 code CODE >79:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+43 code CODE >80:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+44 code CODE >83:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+45 code CODE >84:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+46 code CODE >85:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+47 code CODE >86:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+48 code CODE >87:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+49 code CODE >88:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+4A code CODE >89:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+4B code CODE >90:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+4C code CODE >91:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+4D code CODE >92:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+4E code CODE >93:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+4F code CODE >94:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+50 code CODE >95:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+51 code CODE >96:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+52 code CODE >97:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+53 code CODE >98:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+54 code CODE >99:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+55 code CODE >100:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+56 code CODE >101:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+57 code CODE >104:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+58 code CODE >105:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+59 code CODE >106:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+5A code CODE >107:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+5B code CODE >108:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+5C code CODE >109:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+5D code CODE >112:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+5E code CODE >113:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+5F code CODE >114:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+60 code CODE >117:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+61 code CODE >118:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+62 code CODE >119:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+63 code CODE >122:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+64 code CODE >123:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+65 code CODE >124:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+66 code CODE >127:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+67 code CODE >128:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+68 code CODE >129:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+69 code CODE >132:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+6A code CODE >133:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+6B code CODE >134:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+6C code CODE >137:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+6D code CODE >138:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+6E code CODE >139:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+6F code CODE >142:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+70 code CODE >143:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+71 code CODE >144:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+72 code CODE >147:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+73 code CODE >148:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+74 code CODE >149:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+75 code CODE >152:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+76 code CODE >153:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+77 code CODE >154:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+78 code CODE >157:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+79 code CODE >158:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+7A code CODE >159:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+7B code CODE >204:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/88Setup.inc
+7C code CODE >26:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+7D code CODE >27:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+7E code CODE >28:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+7F code CODE >29:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+80 code CODE >30:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+81 code CODE >31:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+82 code CODE >32:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+83 code CODE >33:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+84 code CODE >34:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+85 code CODE >35:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+86 code CODE >36:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+87 code CODE >37:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+88 code CODE >38:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+89 code CODE >39:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+8A code CODE >40:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+8B code CODE >41:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+8C code CODE >42:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+8D code CODE >43:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+8E code CODE >44:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+8F code CODE >45:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+90 code CODE >46:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+91 code CODE >47:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/I2C_Master.inc
+92 code CODE >24:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+93 code CODE >25:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+94 code CODE >26:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+95 code CODE >27:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+96 code CODE >28:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+97 code CODE >29:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+98 code CODE >30:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+99 code CODE >31:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+9A code CODE >32:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+9B code CODE >33:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+9C code CODE >34:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+9D code CODE >35:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+9E code CODE >36:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+9F code CODE >37:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A0 code CODE >38:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A1 code CODE >39:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A2 code CODE >40:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A3 code CODE >41:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A4 code CODE >42:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A5 code CODE >43:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A6 code CODE >44:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A7 code CODE >45:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A8 code CODE >47:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+A9 code CODE >48:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+AA code CODE >49:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+AB code CODE >50:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+AC code CODE >52:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X/EUSART_SETUP.inc
+AD code CODE >74:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+AE code CODE >75:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+AF code CODE >76:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B0 code CODE >77:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B1 code CODE >78:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B2 code CODE >79:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B3 code CODE >80:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B4 code CODE >81:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B5 code CODE >82:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B6 code CODE >83:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B7 code CODE >84:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B8 code CODE >88:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+B9 code CODE >89:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+BA code CODE >90:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+BB code CODE >93:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+BC code CODE >94:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+BD code CODE >95:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+BE code CODE >99:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+BF code CODE >102:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C0 code CODE >103:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C1 code CODE >104:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C2 code CODE >105:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C3 code CODE >106:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C4 code CODE >108:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C5 code CODE >109:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C6 code CODE >110:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C7 code CODE >111:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C8 code CODE >112:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+C9 code CODE >113:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+CA code CODE >114:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+CB code CODE >115:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+CC code CODE >116:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+CD code CODE >117:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+CE code CODE >119:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+CF code CODE >120:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D0 code CODE >121:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D1 code CODE >122:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D2 code CODE >123:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D3 code CODE >124:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D4 code CODE >125:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D5 code CODE >128:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D6 code CODE >129:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D7 code CODE >130:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D8 code CODE >131:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+D9 code CODE >132:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+DA code CODE >133:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+DB code CODE >134:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+DC code CODE >135:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+DD code CODE >136:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+DE code CODE >141:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+DF code CODE >142:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E0 code CODE >143:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E1 code CODE >144:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E2 code CODE >145:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E3 code CODE >146:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E4 code CODE >147:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E5 code CODE >148:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E6 code CODE >149:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E7 code CODE >150:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E8 code CODE >151:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+E9 code CODE >152:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+EA code CODE >153:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+EB code CODE >154:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+EC code CODE >155:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+ED code CODE >156:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+EE code CODE >157:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+EF code CODE >158:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F0 code CODE >161:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F1 code CODE >162:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F2 code CODE >163:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F3 code CODE >164:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F4 code CODE >165:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F5 code CODE >166:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F6 code CODE >167:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F7 code CODE >168:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F8 code CODE >169:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+F9 code CODE >170:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+FA code CODE >171:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+FB code CODE >172:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+FC code CODE >174:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+FD code CODE >177:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+FE code CODE >178:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+FF code CODE >179:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+100 code CODE >180:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+101 code CODE >181:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+102 code CODE >182:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+103 code CODE >184:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+104 code CODE >185:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+105 code CODE >186:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+106 code CODE >187:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+107 code CODE >189:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+108 code CODE >190:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+109 code CODE >191:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+10A code CODE >192:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+10B code CODE >193:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+10C code CODE >194:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+10D code CODE >196:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+10E code CODE >198:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+10F code CODE >199:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+110 code CODE >200:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+111 code CODE >201:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+112 code CODE >202:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+113 code CODE >203:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+114 code CODE >205:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+115 code CODE >206:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+116 code CODE >207:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+117 code CODE >208:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+118 code CODE >209:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+119 code CODE >210:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+11A code CODE >213:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+11B code CODE >214:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+11C code CODE >215:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+11D code CODE >216:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+11E code CODE >217:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+11F code CODE >218:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+120 code CODE >220:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+121 code CODE >221:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+122 code CODE >222:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+123 code CODE >223:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+124 code CODE >224:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+125 code CODE >225:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+126 code CODE >226:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+127 code CODE >227:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+128 code CODE >228:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+129 code CODE >229:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+12A code CODE >231:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+12B code CODE >232:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+12C code CODE >233:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+12D code CODE >234:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+12E code CODE >235:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+12F code CODE >236:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+130 code CODE >237:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+131 code CODE >238:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+132 code CODE >239:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+133 code CODE >240:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+134 code CODE >241:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+135 code CODE >242:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+136 code CODE >243:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+137 code CODE >244:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+138 code CODE >246:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+139 code CODE >247:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+13A code CODE >248:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+13B code CODE >249:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+13C code CODE >250:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+13D code CODE >251:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+13E code CODE >252:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+13F code CODE >253:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+140 code CODE >254:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+141 code CODE >255:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+142 code CODE >256:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+143 code CODE >257:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+144 code CODE >258:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+145 code CODE >259:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+146 code CODE >261:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+147 code CODE >262:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+148 code CODE >263:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+149 code CODE >264:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+14A code CODE >265:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+14B code CODE >266:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+14C code CODE >267:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+14D code CODE >268:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+14E code CODE >269:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+14F code CODE >270:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+150 code CODE >271:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+151 code CODE >272:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+152 code CODE >273:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+153 code CODE >274:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+154 code CODE >276:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+155 code CODE >277:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+156 code CODE >278:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+157 code CODE >279:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+158 code CODE >280:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+159 code CODE >281:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+15A code CODE >282:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+15B code CODE >283:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+15C code CODE >284:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+15D code CODE >285:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+15E code CODE >286:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+15F code CODE >288:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+160 code CODE >289:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+161 code CODE >291:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+162 code CODE >292:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+163 code CODE >293:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+164 code CODE >294:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+165 code CODE >297:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+166 code CODE >298:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+167 code CODE >300:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+168 code CODE >301:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+169 code CODE >302:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+16A code CODE >303:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+16B code CODE >306:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+16C code CODE >307:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+16D code CODE >308:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+16E code CODE >309:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+16F code CODE >310:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+170 code CODE >311:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+171 code CODE >313:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+172 code CODE >314:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+173 code CODE >315:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+174 code CODE >316:C:\Users\payde\OneDrive\Desktop\SEM5 FINAL\MIDI-Projects\Universals\Master\Programming\MIDIMASTER.X\MAIN.S
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 2EA 0 ABS 0 - -
+__Hspace_1 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 10010 0 ABS 0 - -
+__HisrVect A 0 CODE 0 isrVect -
+__Hudata_bank0 2EA 0 ABS 0 udata_bank0 -
+__Hudata_bank1 2EA 0 ABS 0 udata_bank1 -
+__Hudata_bank2 2EA 0 ABS 0 udata_bank2 -
+__Hudata_bank3 2EA 0 ABS 0 udata_bank3 -
+__Hudata_bank4 2EA 0 ABS 0 udata_bank4 -
+__Hudata_bank5 2EA 0 ABS 0 udata_bank5 -
+__Hudata_bank6 2EA 0 ABS 0 udata_bank6 -
+__Hudata_bank7 2EA 0 ABS 0 udata_bank7 -
+__Hudata_bank8 2EA 0 ABS 0 udata_bank8 -
+__Hudata_bank9 2EA 0 ABS 0 udata_bank9 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_bank10 2EA 0 ABS 0 udata_bank10 -
+__Hudata_bank11 2EA 0 ABS 0 udata_bank11 -
+__Hudata_bank12 2EA 0 ABS 0 udata_bank12 -
+__Hudata_bank13 2EA 0 ABS 0 udata_bank13 -
+__Hudata_bank14 2EA 0 ABS 0 udata_bank14 -
+__Hudata_bank15 2EA 0 ABS 0 udata_bank15 -
+__Hudata_bank16 2EA 0 ABS 0 udata_bank16 -
+__Hudata_bank17 2EA 0 ABS 0 udata_bank17 -
+__Hudata_bank18 2EA 0 ABS 0 udata_bank18 -
+__Hudata_bank19 2EA 0 ABS 0 udata_bank19 -
+__Hudata_bank20 2EA 0 ABS 0 udata_bank20 -
+__Hudata_bank21 2EA 0 ABS 0 udata_bank21 -
+__Hudata_bank22 2EA 0 ABS 0 udata_bank22 -
+__Hudata_bank23 2EA 0 ABS 0 udata_bank23 -
+__Hudata_bank24 2EA 0 ABS 0 udata_bank24 -
+__Hudata_bank25 2EA 0 ABS 0 udata_bank25 -
+__Hedata 2EA 0 ABS 0 edata -
+__Hudata 2EA 0 ABS 0 udata -
+__Hconfig 10012 0 CONFIG 4 config -
+__Ledata 2EA 0 ABS 0 edata -
+__Ludata 2EA 0 ABS 0 udata -
+__Hcode 2EA 0 CODE 0 code -
+__Hdata 2EA 0 ABS 0 data -
+__Lcode 10 0 CODE 0 code -
+__Ldata 2EA 0 ABS 0 data -
+__S0 0 0 ABS 0 - -
+__S1 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Ludata_bank10 2EA 0 ABS 0 udata_bank10 -
+__Ludata_bank11 2EA 0 ABS 0 udata_bank11 -
+__Ludata_bank12 2EA 0 ABS 0 udata_bank12 -
+__Ludata_bank13 2EA 0 ABS 0 udata_bank13 -
+__Ludata_bank14 2EA 0 ABS 0 udata_bank14 -
+__Ludata_bank15 2EA 0 ABS 0 udata_bank15 -
+__Ludata_bank16 2EA 0 ABS 0 udata_bank16 -
+__Ludata_bank17 2EA 0 ABS 0 udata_bank17 -
+__Ludata_bank18 2EA 0 ABS 0 udata_bank18 -
+__Ludata_bank19 2EA 0 ABS 0 udata_bank19 -
+__Ludata_bank20 2EA 0 ABS 0 udata_bank20 -
+__Ludata_bank21 2EA 0 ABS 0 udata_bank21 -
+__Ludata_bank22 2EA 0 ABS 0 udata_bank22 -
+__Ludata_bank23 2EA 0 ABS 0 udata_bank23 -
+__Ludata_bank24 2EA 0 ABS 0 udata_bank24 -
+__Ludata_bank25 2EA 0 ABS 0 udata_bank25 -
+__Lconfig 0 0 CONFIG 4 config -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__LisrVect 8 0 CODE 0 isrVect -
+__HresetVect 2 0 CODE 0 resetVect -
+__Ludata_bank0 2EA 0 ABS 0 udata_bank0 -
+__Ludata_bank1 2EA 0 ABS 0 udata_bank1 -
+__Ludata_bank2 2EA 0 ABS 0 udata_bank2 -
+__Ludata_bank3 2EA 0 ABS 0 udata_bank3 -
+__Ludata_bank4 2EA 0 ABS 0 udata_bank4 -
+__Ludata_bank5 2EA 0 ABS 0 udata_bank5 -
+__Ludata_bank6 2EA 0 ABS 0 udata_bank6 -
+__Ludata_bank7 2EA 0 ABS 0 udata_bank7 -
+__Ludata_bank8 2EA 0 ABS 0 udata_bank8 -
+__Ludata_bank9 2EA 0 ABS 0 udata_bank9 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__LresetVect 0 0 CODE 0 resetVect -
+__Hudata_shr 2EA 0 ABS 0 udata_shr -
+__Ludata_shr 2EA 0 ABS 0 udata_shr -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+code 0 8 10 16D 2
+resetVect 0 0 0 1 2
+isrVect 0 4 8 1 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
